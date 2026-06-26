@@ -9,13 +9,13 @@
 ![Multi-Agent](https://img.shields.io/badge/Multi--Agent_Orchestration-1F3A5F?style=flat-square)
 ![Reliable LLMs](https://img.shields.io/badge/Reliable_LLM_Output-1F3A5F?style=flat-square)
 ![Edge Inference](https://img.shields.io/badge/Edge_Inference-1F3A5F?style=flat-square)
-![Production ML](https://img.shields.io/badge/Production_Reliability-1F3A5F?style=flat-square)
+![Production Reliability](https://img.shields.io/badge/Production_Reliability-1F3A5F?style=flat-square)
 
 </div>
 
 ---
 
-Most of my work starts after the demo breaks. It's easy to build an agent that reasons fine in a clean test suite and falls apart the moment it hits real, messy input. The interesting engineering is everything after that: the guardrails, the validation, the retries, and the edge-hardware constraints that decide whether a system actually holds up in production. That's the part I'm good at.
+Most of my work starts after the demo breaks. It's easy to build an agent that reasons fine in a clean test suite and falls apart the moment it hits real, messy input. The interesting engineering is everything after that: the guardrails, the validation, the retries, and the edge-hardware constraints that decide whether a system actually holds up in production. That's the part I care about.
 
 I've shipped this across regulated legal-tech, clean-energy edge devices, and large-scale matching systems - anywhere a bad architectural call has immediate, real-world consequences.
 
@@ -27,6 +27,12 @@ I've shipped this across regulated legal-tech, clean-energy edge devices, and la
 - Non-deterministic models need deterministic guardrails around them. Validation, abstention, and bounded retries aren't extras; they're the product.
 - Use models where they genuinely fit, and classical ML where they don't. An LLM is a poor time-series forecaster and a great reasoner - knowing the difference is most of the job.
 - Reliability is a feature you design in, not a bug you patch later.
+
+### Selected results
+
+- Cut edge-gateway inference latency **~90%** (≈5s to under 500ms) on CPU-only hardware by replacing cloud APIs with 4-bit quantized local models via llama.cpp.
+- Raised legal-clause retrieval accuracy **40%** over a golden-dataset baseline with hybrid search and parent-child document indexing.
+- Forced **100% schema-valid** model output under live load using grammar-constrained decoding (GBNF), eliminating command-parsing failures.
 
 ---
 
@@ -45,7 +51,7 @@ A sequence-to-sequence model that generates Python from natural-language descrip
 - **Multi-agent orchestration** - LangGraph and DSPy state machines that survive real traffic
 - **Reliable LLM output** - schema validation, self-correction, grammar-constrained decoding
 - **Edge inference** - llama.cpp, 4-bit quantization, latency from seconds to milliseconds
-- **Production ML** - the telemetry, guardrails, and MLOps that keep non-deterministic systems honest
+- **Production reliability** - the telemetry, guardrails, and MLOps that keep non-deterministic systems honest
 
 ### Tools I reach for most
 
