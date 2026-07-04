@@ -2,7 +2,7 @@
 
 # Ramkumar Muraleedharan
 
-**Senior AI / ML Engineer**  ·  New York, NY
+**Senior AI/ML engineer in New York. I build LLM and ML systems that hold up in production: multi-agent workflows, evaluation pipelines, structured-output constraints, and low-latency inference on CPU-only edge hardware.**  
 
 *I make non-deterministic systems behave.*
 
@@ -12,6 +12,8 @@
 ![Production Reliability](https://img.shields.io/badge/Production_Reliability-1F3A5F?style=flat-square)
 
 </div>
+
+
 
 ---
 
@@ -40,17 +42,22 @@ I've shipped this across regulated legal-tech, clean-energy edge devices, and la
 
 ---
 
-### Featured work
+## Projects
+ 
+**[traceval](https://github.com/theramkm/traceval)** · `pip install traceval` · MIT
+ 
+Turns agent trace exports (OpenTelemetry GenAI, Langfuse, LangSmith) into runnable pytest eval suites. Clusters failures, generates golden and regression cases, compares runs, gates CI with exit codes, and calibrates LLM judges against blind human labels. Offline, deterministic, no platform account.
+ 
+**[dspyer](https://github.com/theramkm/dspyer)** · `pip install dspyer` · GPL2
+ 
+Validated, self-correcting LLM steps for DSPy and LangGraph. Wraps model calls in Pydantic schemas, feeds validation errors back until output conforms, and compiles to DSPy modules so prompts can be tuned from data.
+ 
+**[ENDGAME](https://github.com/theramkm/endgame)** · PyTorch · 2021
+ 
+Natural-language-to-Python code generation, built before LLM code assistants existed. Seq2seq model trained on a hand-built 4,600-pair dataset with whitespace-aware tokenization; the README documents the experiments that failed (custom code embeddings) as carefully as the ones that worked.
+ 
 
-**[dspyer](https://github.com/theramkm/dspyer)** &nbsp;·&nbsp; *Python · Apache-2.0 · [PyPI](https://pypi.org/project/dspyer/)*
-
-Reliable, optimizable LLM steps for DSPy and LangGraph. Wrap a model call in a Pydantic schema and it self-corrects against its own validation errors until the output conforms. Each step compiles to a standard DSPy module, so prompts are tuned from data with an optimizer instead of edited by hand. Drops into an existing LangGraph without a rewrite.
-
-**[ENDGAME](https://github.com/theramkm/ENDGAME)** &nbsp;·&nbsp; *seq2seq · PyTorch · 2021*
-
-A sequence-to-sequence model that generates Python from natural-language descriptions, with custom-trained code embeddings. Built before LLM code assistants existed, back when training your own was the only way to do it.
-
----
+ 
 
 ### What I work on
 
